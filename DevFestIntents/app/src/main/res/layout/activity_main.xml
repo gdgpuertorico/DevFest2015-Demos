@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Relative Layout allows us to position
+    child views relative to each other-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="onSendMessage"
+        android:text="@string/send"/>
+
+    <Button
+        android:id="@+id/send_to_second_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_button"
+        android:layout_centerInParent="true"
+        android:onClick="onSendMessageToActivity"
+        android:text="@string/send_to_second"/>
+
+    <!--An Edit Text is an input component, for those coming from
+    WindowsForm with C# this is the equivalent of a TextBox-->
+    <EditText
+        android:id="@+id/message_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_to_second_activity_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:ems="15"
+        android:inputType="text">
+    </EditText>
+</RelativeLayout>
